@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GH Copilot Hello World</title>
+
+    <!-- import font: roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* default font roboto light */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* <main> should be vertical centered */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* the text should be centered */
+        h1 {
+            text-align: center;
+        }
+
+        /* the img should be centered and 20% width */
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>{{message}}</h1>
+        </div>
+
+        <div>
+            <!-- img containing copilot.png -->
+            <img src="copilot.png" alt="copilot logo" @click="onImageClicked">
+        </div>
+    </main>
+
+    <!-- import vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer>
+        // initialize vue.js
+        const app = new Vue({
+            el: 'main',
+            data: {
+                message: 'Hello World from GH Copilot'
+            },
+            methods: {
+                onImageClicked() {
+                    alert('Hello World from GH Copilot');
+                    // navigate to /copilot in new tab - noreferrer, noopener
+                    window.open('/copilot', '_blank', 'noreferrer, noopener');
+                }
+            }
+        });
+
+        // vue enable production mode
+        Vue.config.productionTip = false;
+        // vue disable vue-devtools
+        Vue.config.devtools = false;
+    </script>
+</body>
+
+</html>

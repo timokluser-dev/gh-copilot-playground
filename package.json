@@ -1,0 +1,29 @@
+{
+  "name": "gh-copilot-playground",
+  "version": "1.0.0",
+  "description": "Playground to test out GitHub's Copilot.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timokluser-dev/gh-copilot-playground.git"
+  },
+  "keywords": [
+    "playground",
+    "github",
+    "copilot"
+  ],
+  "author": "timokluser-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timokluser-dev/gh-copilot-playground/issues"
+  },
+  "homepage": "https://github.com/timokluser-dev/gh-copilot-playground#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
